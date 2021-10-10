@@ -28,23 +28,23 @@ app.get("/error", function (req, res, next) {
 
 app.use(errorHandlers.error); //last one
 app.use(errorHandlers.notFound); //last one
-// app.listen(app.get("port"), function () {
-//   console.log(`Server up: http://localhost:${app.get("port")}`);
-// });
+app.listen(app.get("port"), function () {
+  console.log(`Server up: http://localhost:${app.get("port")}`);
+});
 
 // app.get("*", (req, res) => {
 //   res.status(200).json({ message: "ok" });
 // });
-const options = {
-  key: fs.readFileSync(path.join(__dirname, "cert", "key.pem")),
-  cert: fs.readFileSync(path.join(__dirname, "cert", "cert.pem")),
-};
-const port = app.get("port");
-spdy.createServer(options, app).listen(port, (error) => {
-  if (error) {
-    console.error(error);
-    return process.exit(1);
-  } else {
-    console.log("Listening on port: https://localhost:" + port + ".");
-  }
-});
+// const options = {
+//   key: fs.readFileSync(path.join(__dirname, "cert", "key.pem")),
+//   cert: fs.readFileSync(path.join(__dirname, "cert", "cert.pem")),
+// };
+// const port = app.get("port");
+// spdy.createServer(options, app).listen(port, (error) => {
+//   if (error) {
+//     console.error(error);
+//     return process.exit(1);
+//   } else {
+//     console.log("Listening on port: https://localhost:" + port + ".");
+//   }
+// });
