@@ -1,3 +1,6 @@
+global.TextEncoder = require("util").TextEncoder;
+global.TextDecoder = require("util").TextDecoder;
+
 var express = require("express"),
   config = require("./config"),
   spdy = require("spdy"),
