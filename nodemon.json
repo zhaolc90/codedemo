@@ -1,0 +1,3 @@
+{
+  "ignore": ["public/upload/*", "readme.md", "*.test.js"]
+}
