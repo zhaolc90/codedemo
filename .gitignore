@@ -10,5 +10,4 @@ coverage
 sandbox
 test/out-fixtures/*
 bower_components/
-cert/
 UI/
